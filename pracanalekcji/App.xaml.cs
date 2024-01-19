@@ -2,6 +2,7 @@
 using System;
 using System.IO;
 using Xamarin.Forms;
+using pracanalekcji.Views;
 
 namespace pracanalekcji
 {
@@ -15,7 +16,7 @@ namespace pracanalekcji
             {
                 if (database == null)
                 {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "people.db3"));
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "librus.db3"));
                 }
                 return database;
             }
@@ -25,7 +26,7 @@ namespace pracanalekcji
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Login_Page();
         }
 
         protected override void OnStart()
